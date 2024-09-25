@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Tela de Edição</h1>
+
+    <form action="/atualizar" method="post">
+        {{#each posts}}
+            {{#dataValues}}
+
+                <input type="hidden" name="id" value="{{this.id}}">
+
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" value="{{this.nome}}" placeholder="Digite o nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco" value="{{this.endereco}}" placeholder="Digite o endereço">
+                </div>
+
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" class="form-control" id="bairro" name="bairro" value="{{this.bairro}}" placeholder="Digite o bairro">
+                </div>
+
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" class="form-control" id="cep" name="cep" value="{{this.cep}}" placeholder="Digite o CEP">
+                </div>
+
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" class="form-control" id="cidade" name="cidade" value="{{this.cidade}}" placeholder="Digite a cidade">
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <input type="text" class="form-control" id="estado" name="estado" value="{{this.estado}}" placeholder="Digite o estado">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Salvar</button>
+
+            {{/dataValues}}
+        {{/each}}
+    </form>
+
+</div>
